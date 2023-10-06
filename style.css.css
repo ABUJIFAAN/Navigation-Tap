@@ -1,0 +1,123 @@
+*
+{
+    box-sizing: border-box;
+}
+h2
+{
+    color: #E4F1FF;
+    text-align: center;
+    font-size: 2em;
+}
+.g
+{
+    color: #2c3e50;
+    text-align: center;
+    font-size: 1em;
+}
+body
+{
+    background: #27005D;
+    font-family: "open sans";
+    color: #9400FF;
+    line-height: 1.618em;
+}
+.wrapper
+{
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 25%;
+}
+.tabs
+{
+    position: relative;
+    margin: 3rem 0;
+    background: #27005D;
+    height: 14.75rem;
+}
+.tabs::after,
+.tabs::before
+{
+    content: "";
+    display: table;
+}
+.tabs::after
+{
+    clear:both;
+}
+.tab
+{
+    float: left;
+}
+.tab-switch{
+    display: none;
+}
+.tab-label
+{
+    position: relative;
+    display: block;
+    line-height: 2.75em;
+    height: 3em;
+    padding: 0 1.618em;
+    background: #9400FF;
+    /*border-right: 0.125rem solid #AED2FF;*/
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    top: 0;
+    transition: all 0.25s;
+}
+.tab-label:hover
+{
+    top: -0.25rem;
+    transition: top 0.25s;
+    border-top: 0.25rem solid #AED2FF;
+}
+.tab-content
+{
+    height: 12rem;
+    position: absolute;
+    z-index: 1;
+    top: 2.75em;
+    left: 0;
+    padding: 1.618rem;
+    background: #E4F1FF;
+    color: #2c3e50;
+    border-bottom: 0.25rem solid #bdc3c7;
+    opacity: 0;
+    transition: all 0.35s;
+    width: 69.30%;
+    height: 60vh;
+    color: #333;
+    font-weight: bold;
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+}
+.tab-switch:checked + .tab-label
+{
+    background: #E4F1FF;
+    color: #2c3e50;
+    border-bottom: 0;
+    border-right: 0.125rem solid #fff;
+    transition: all 0.35s;
+    z-index: 1;
+    top: -0.0625rem;
+}
+.tab-switch:checked + label + .tab-content
+{
+    z-index: 2;
+    opacity: 1;
+    transition: all 0.35s;
+}
+p
+{
+    color: #E4F1FF;
+    margin-top: 15%;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: -18%;
+}
